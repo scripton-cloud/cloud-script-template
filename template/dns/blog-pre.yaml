@@ -1,0 +1,12 @@
+base:
+  A:
+    rttl: 1
+    rclass: IN
+    rdata: {{ SERVER_GW_IP }}
+
+pre:
+  - rtype: A
+    names:
+      - '@'
+      - www
+      - api

@@ -1,0 +1,25 @@
+override:
+  CNAME:
+    autodiscover:
+      rdata: autodiscover.outlook.com
+    enterpriseenrollment:
+      rdata: enterpriseenrollment-s.manage.microsoft.com
+    enterpriseregistration:
+      rdata: enterpriseregistration.windows.net
+    lyncdiscover:
+      rdata: webdir.online.lync.com
+    sip:
+      rdata: sipdir.online.lync.com
+  SRV:
+    "_sipfederationtls._tcp":
+      rdata: "100 1 5061 sipfed.online.lync.com"
+    "_sip._tls":
+      rdata: "100 1 443 sipdir.online.lync.com"
+  MX:
+    "@":
+      rdata: "0 {{ ZONE_NAME }}.mail.protection.outlook.com"
+  TXT:
+    "@":
+      rdata:
+        - "v=spf1 include:spf.protection.outlook.com -all"
+        - "MS={{ MS_CODE }}"

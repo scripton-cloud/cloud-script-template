@@ -1,0 +1,15 @@
+domains:
+  blogservice.kr:
+    ZONE_NAME: myblogservice-kr
+  blogservice.co.kr:
+    ZONE_NAME: myblogservice-co-kr
+  blogservice.com:
+    ZONE_NAME: myblogservice-com
+
+variables:
+  - home-cluster
+
+templates:
+  - blogservice
+  - office365
+  - base-cluster

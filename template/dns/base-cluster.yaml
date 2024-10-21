@@ -1,0 +1,7 @@
+base:
+  A:
+    rdata: {{SERVER_GW_IP}}
+    rttl: 1
+    rclass: IN
+  CNAME:
+    rdata: {{GHPAGES_CNAME}}
